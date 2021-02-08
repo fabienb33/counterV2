@@ -15,6 +15,7 @@ function App() {
         moins=""
         plus=""
         reset="reset"
+        suppCounter="Remove counter"
       />
       <Footer/>
     </div>

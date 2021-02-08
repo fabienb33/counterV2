@@ -1,146 +1,135 @@
 body {
-    background-color: rgb(255, 255, 255);
-    font-family: "Roboto";
+  background-color: rgb(255, 255, 255);
+  font-family: "Roboto";
+}
+.header {
+  width: 100vw;
+  height: 10vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom: rgb(236, 236, 236) 1px solid;
 }
 
 .bgCounter {
-    background-color: white ;
-    width: 250px;
-    height: auto;
-    border-radius: 20px;
-    margin-left: auto;
-    margin-right: auto;
-    padding: 30px;
-    display: flex;
-    align-content: center;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    position: relative;
+  height: 500px;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
 }
+
+.boxAddCounter {
+  width: 100vw;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.buttonAddCounter {
+  width: auto;
+  height: 60px;
+  padding: 20px;
+  border-radius: 20px;
+  background-color: rgb(136, 91, 219);
+  font-size: 1.5rem;
+  color: #fff;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.boxCounter {
+  width: 300px;
+  height: 300px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  margin: 1%;
+}
+
 
 .counter {
-    width: 150px;
-    height: 150px;
-    border-radius: 20px;
-    background-color: rgb(136, 91, 219);
-    font-size: 3rem;
-    color: #fff;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: absolute;
+  width: 150px;
+  height: 150px;
+  border-radius: 20px;
+  background-color: rgb(136, 91, 219);
+  font-size: 3rem;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 10px;
 }
 
-.boxAdd {
-    width: 100vw;
-    height: 60px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 100px;
+
+.boxLess, .less {
+  cursor: pointer;
+  width: 50px;
+  height: 50px;
+  background-color: #fff;
+  font-size: 2rem;
+  border: none;
+  outline: none;
 }
 
-.addCounter{
-    width: 200px;
-    height: 60px;
-    border-radius: 20px;
-    background-color: rgb(136, 91, 219);
-    font-size: 1.5rem;
-    color: #fff;
-    cursor: pointer;
-    border: none;
-    outline:none;
+.boxMore, .more {
+  cursor: pointer;
+  width: 50px;
+  height: 50px;
+  background-color: #fff;
+  font-size: 2rem;
+  border: none;
+  outline: none;
 }
 
-.buttonAdd {
-    width: 100vw;
-    height: 10vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 400px;
+.reset {
+  width: 150px;
+  height: 60px;
+  border-radius: 20px;
+  background-color: rgb(136, 91, 219);
+  font-size: 1.5rem;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border: none;
+  outline: none;
 }
 
-.moins {
-    cursor: pointer;
-    width: 50px;
-    height: 50px;
-    background-color: #fff;
-    font-size: 2rem;
-    border: none;
-    outline:none;
-    float: left;
-    left: 0px;
-    position: absolute;
-}
 
-.plus{
-    cursor: pointer;
-    width: 50px;
-    height: 50px;
-    background-color: #fff;
-    font-size: 2rem;
-    border: none;
-    outline:none;
-    right: 0px;
-    position: absolute;
-}
 
-.reset{
-    width: 150px;
-    height: 60px;
-    border-radius: 20px;
-    background-color: rgb(136, 91, 219);
-    font-size: 1.5rem;
-    color: #fff;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    border: none;
-    outline:none;
-    margin-top:250px;
-    position: absolute;
-}
-
-.header {
-    width: 100vw;
-    height: 10vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-bottom: rgb(236, 236, 236) 1px solid;
-
-}
-
-.stopwatch{
-    color: rgb(136, 91, 219);
-    font-size: 3vw;
+.stopwatch {
+  color: rgb(136, 91, 219);
+  font-size: 3vw;
 }
 
 .title {
-    color: rgb(39, 35, 41);
-    font-size: 3vw;
-    margin-left: 1%;
+  color: rgb(39, 35, 41);
+  font-size: 3vw;
+  margin-left: 1%;
 }
 
 .footer {
-    position: absolute;
-    bottom: 0px;
-    width: 100vw;
-    height: 10vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-top: rgb(236, 236, 236) 1px solid;
-    color: rgb(39, 35, 41);
-    font-weight: 400;
-    font-size: 1vw;
-
+  position: absolute;
+  bottom: 0px;
+  width: 100vw;
+  height: 10vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-top: rgb(236, 236, 236) 1px solid;
+  color: rgb(39, 35, 41);
+  font-weight: 400;
+  font-size: 1vw;
 }
 
 .bold {
-    font-weight: 900;
+  font-weight: 900;
 }
-

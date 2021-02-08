@@ -8,36 +8,43 @@ const Counter = (props) => {
   const [counters, setCounters] = useState([0])
 
    return (
-       
         <div className="bgCounter">
-          <div className="boxAdd">
-                  <button onClick = {() => {
+          <div className="boxAddCounter">
+                  {counters.length < 3 && <button onClick = {() => {
                   const newCounter = [...counters]; newCounter.push(0); setCounters(newCounter);}} 
-                  className="addCounter">{props.addCounters}</button>
+                  className="buttonAddCounter">{props.addCounters}</button>}
           </div>
-
-      {counters.map((counter, index) => { 
+        {counters.map((counter, index) => { 
         return (
-          <div className="buttonAdd">
-              {counter > 0 && <button onClick = {() => {
+          <div className="boxCounter">
+              <div className="boxLess">
+                {counter > 0 && <button onClick = {() => {
                   const newCounter = [...counters]; newCounter[index] --; setCounters(newCounter);}}
-                  className="moins"><FontAwesomeIcon icon="minus"/></button>}
+                  className="less"><FontAwesomeIcon icon="minus"/></button>}
+              </div>
 
               <span className="counter">{counter}</span>
 
-              {counter < 10 && <button onClick = {() => {
+              <div className="boxMore">
+                {counter < 10 && <button onClick = {() => {
                   const newCounter = [...counters]; newCounter[index] ++; setCounters(newCounter);}}
-                  className="plus"><FontAwesomeIcon icon="plus"/>{props.plus}</button>}
+                  className="more"><FontAwesomeIcon icon="plus"/>{props.plus}</button>}
+              </div>
 
-              <button onClick = {counter} className="reset">{props.reset}</button>
+              <button onClick = {() => {
+                  const newCounter = [...counters];
+                  newCounter[index] = 0; setCounters(newCounter);}} className="reset">{props.reset}</button>
           </div>
         );
      })}
-               
-
+          <div className="boxAddCounter">
+                  {counters.length >= 2 && <button onClick = {() => {
+                  const newCounter = [...counters]; newCounter.shift(0); setCounters(newCounter);}} 
+                  className="buttonAddCounter">{props.suppCounter}</button>}
+          </div>
         </div>
     );
-    
 }
-
 export default Counter; 
+
+
